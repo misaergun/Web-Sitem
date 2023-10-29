@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Müberra Nisa Ergün</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/Logo.png" class="Logo">
+            <ul>
+                <li><a href:"#">Home</a></li>
+                <li><a href:"#">About</a></li>
+                <li><a href:"#">Skills</a></li>
+                <li><a href:"#">Portfolio</a></li>
+                <li><a href:"#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Junior Developer</p>
+            <h1>Merhaba, Ben <span>Nisa.</span> Sayfama hoş geldiniz!</h1>
+        </div>
+    </div>  
+</div>
+<!-- -----------About----------- -->
+<div id="About">
+    <div class ="container">
+        <div class ="row">
+            <div class="About-col-1">
+                <img src="images/user.jpg">
+            </div>
+            <div class="About-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p> Ben Müberra Nisa Ergün. Süleyman Demirel Üniversitesi'nde
+                    Bilgisayar Mühendisliği 3. sınıf öğrencisiyim. 22 yaşındayım. Şu an Isparta'da
+                    yaşıyorum. C#, Java, SQL dillerinde projeler geliştiriyorum. 
+                    Ayrıca Javascript, html ve css üzerine eğitimler alıyorum.
+                </p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>C#</span></li>
+                        <li><span>Java</span></li>
+                        <li><span>SQL</span></li>
+                        <li><span>HTML/CSS</span></li>
+
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2015-2019</span><br>Karaman TOBB Fen Lisesi</li>
+                        <li><span>2020-2025</span><br>Süleyman Demirel Üniversitesi- Bilgisayar Mühendisliği</li>
+
+
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-----------------CONTACT------------>
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+            <h1 class="sub-title">Benimle iletişime Geçin!</h1>
+            <p><i class="fas fa-paper-plane"></i>nisaergun.21@gmail.com</p>
+            <p> <i class="fa-light fa-phone"></i>+90 5054701415</p>
+            <div class="social-icons">
+               <a href="https://www.linkedin.com/in/m%C3%BCberra-nisa-erg%C3%BCn-856a0923b"><i class="fa-brands fa-linkedin"></i></a>
+               <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name ="Name" placeholder = "İsim" required>
+                    <input type="text" name ="email" placeholder = "E-mail" required>
+                    <input type="text" name ="konu" placeholder = "Konu" required>
+                    <textarea name ="mesaj" id="" rows=" " placeholder="Mesaj"> </textarea>
+                    <button type="submit" class="btn btn1">Submit</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright"></div>
+    <p>M. Nisa Ergün tarafından yapılmıştır. Tüm hakları saklıdır.</p>
+</div>
+
+<script>
+   
+   var tablinks = document.getElementsByClassName("tab-links");
+   var tabcontents = document.getElementsByClassName("tab-contents");
+
+   function opentab(tabname)
+   {
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+   }
+</script>
+</body>
+</html>
